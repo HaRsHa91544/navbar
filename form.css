@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-image: url('nar.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.62);
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type:none;
+    box-shadow: 2px 2px 5px rgb(116, 116, 116);
+}
+
+nav li{
+    height: 60px;
+}
+
+nav a{
+    padding: 0px 40px;
+    height: 100%;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover{
+    transition: all 0.15s ease-in;
+    background-color: hsla(0, 0%, 0%, 0.086);
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    display: none;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.274);
+}
+.sidebar ul{
+    transition: all 0.15s;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.menubtn{
+    display: none;
+}
+
+@media (max-width:800px){
+    .hideList{
+        display: none;
+    }
+    .menubtn{
+        display: block;
+    }
+}
+
+@media (max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
